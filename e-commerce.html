@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Commerce Web Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background-image: url("https://wallpapercave.com/wp/wp2506817.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+    h1 {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(255, 238, 0);
+      height: 10pc;
+      width: 30pc;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 10px;
+    }
+     /* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 10px;
+}
+  </style>
+</head>
+<body class="bg-gray-100 min-h-screen">
+  <!-- Header -->
+  <h1 class="text-8xl text-red-600 font-bold">AM-Kart</h1>
+
+  <!-- Review Section -->
+  <div class="w-full max-w-lg bg-white rounded-lg shadow-md p-6 mx-auto">
+    <img src="https://img.pluralsight.com/course-images/product-image-photoshop-2017-v1.jpg">
+    <h2 class="text-xl font-semibold mb-4">Leave a Review</h2>
+    <form action="#" method="POST" class="space-y-4">
+      <!-- Star Rating -->
+      <fieldset>
+        <legend class="text-gray-700 font-medium">Rating:</legend>
+        <div class="flex space-x-1 mt-2">
+          <label>
+            <input type="radio" name="rating" value="1" class="hidden peer">
+            <span class="text-gray-400 peer-checked:text-yellow-500">&#9733;</span>
+          </label>
+          <label>
+            <input type="radio" name="rating" value="2" class="hidden peer">
+            <span class="text-gray-400 peer-checked:text-yellow-500">&#9733;</span>
+          </label>
+          <label>
+            <input type="radio" name="rating" value="3" class="hidden peer">
+            <span class="text-gray-400 peer-checked:text-yellow-500">&#9733;</span>
+          </label>
+          <label>
+            <input type="radio" name="rating" value="4" class="hidden peer">
+            <span class="text-gray-400 peer-checked:text-yellow-500">&#9733;</span>
+          </label>
+          <label>
+            <input type="radio" name="rating" value="5" class="hidden peer">
+            <span class="text-gray-400 peer-checked:text-yellow-500">&#9733;</span>
+          </label>
+        </div>
+        <div class="custom-scrollbar mt-4 max-h-64 overflow-y-auto border rounded-lg p-4 bg-gray-50 space-y-4">
+            <!-- Static Example Reviews -->
+            <div>
+      </fieldset>
+
+      <!-- Review Input -->
+      <textarea name="review" rows="4" class="w-full border rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Write your review..."></textarea>
+
+      <!-- Submit Button -->
+      <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">
+        Submit
+      </button>
+    </form>
+
+    <!-- Review List -->
+    <h3 class="text-lg font-semibold mt-6">Reviews</h3>
+    <div class="mt-4 max-h-64 overflow-y-auto border rounded-lg p-4 bg-gray-50 space-y-4">
+      <p class="text-gray-500 text-sm italic">No reviews yet. Be the first to leave a review!</p>
+    </div>
+  </div>
+</body>
+</html>

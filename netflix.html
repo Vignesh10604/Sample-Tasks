@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>NetFlix Web Page</title>
+    </head>
+        <style>
+            body{
+                background-image: url("https://wallpapercave.com/wp/wp5063342.png");
+            }
+            h1{
+                color: rgb(255, 0, 0);
+                font-size: 50px;
+                font-weight: bold;  
+                margin-right:auto;
+                border-color: white;              
+            }
+            button{
+                background-color: red;
+                color: white;
+                cursor: pointer;
+            }
+            h2{
+                color: white;
+                text-align: center;
+                font-size: 50px;
+            }
+            p{
+                color: rgb(255, 255, 255);
+                text-align: center;
+                font-size: 25px;
+            }
+            header{
+                display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            }
+            .top-buttons{
+           margin-left: 15px;
+           padding: 8px 15px;
+           font-size: 14px;
+           border:1px solid ;
+           border-radius: 3px;
+            }
+            .top-buttons button:hover{
+            background-color: #e50914;
+            border-color:  #e50914;
+          }
+          .getstarted-btn{
+            background-color: #e50914;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            font-size: 1rem;
+          }
+          .email-box{
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+          }
+          .top-buttons{
+           margin-left: 15px;
+           padding: 8px 15px;
+           font-size: 14px;
+           color: #fff;
+           background-color: transparent;
+           border: 1px solid #fff;
+           border-radius: 3px;
+           cursor: pointer;
+          }
+          .top-buttons button:hover{
+            background-color: #e50914;
+            border-color:  #e50914;
+          }
+
+
+
+        </style>
+        <header>
+        <h1>NETFLIX</h1> 
+        <div class="top-buttons">
+        <button class="language-btn">Language</button>
+        <button class="signin-btn"> Sign In</button>
+        </div>
+        </header>
+        <body>
+        <h2>Unlimited Movies,Tv<br>
+              Shows and more</h2>
+             <p>
+                Starts at ₹149. Cancel at any time.
+
+                Ready to watch? Enter your email to create or restart your membership.</p>
+                <div class="email-box">
+                <input type="email" placeholder="Email Address" required>
+                <button class="getstarted-btn">Get Started -></button> 
+                </div>
+    </body>
+</html>
