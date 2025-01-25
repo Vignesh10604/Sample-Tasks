@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple DOM Manipulation</title>
+</head>
+<body>
+    <h1 id="main-title">Welcome to DOM Manipulation</h1>
+    <button id="changeTitle">Change Title</button>
+    <button id="addItem">Add Item</button>
+    <button id="deleteItem">delete Item</button>
+    <ul id="itemList">
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+
+    <script>
+        // Select elements
+        const title = document.getElementById('main-title');
+        const changeTitleButton = document.getElementById('changeTitle');
+        const addItemButton = document.getElementById('addItem');
+        const deleteItemButton = document.getElementById('deleteItem');
+        const itemList = document.getElementById('itemList');
+
+        // Change title text when the button is clicked
+        changeTitleButton.addEventListener('click', () => {
+            title.textContent = 'Title Changed!';
+        });
+        changeTitleButton.addEventListener('dblclick', () => {
+            title.textContent = 'Title Changed for double clicked!';
+        });
+        // Add a new item to the list when the button is clicke
+        addItemButton.addEventListener('click', () => {
+            const newItem = document.createElement('li');
+            newItem.textContent = `Item ${itemList.children.length + 1}`;
+            itemList.appendChild(newItem);
+        });
+        
+        // delete an item
+        deleteItemButton.addEventListener('click', () =>{
+            if(itemList.children.length > 0){
+            itemList.removeChild(itemList.lastElementChild);
+            }
+            else{
+                alert('no items to delete');
+            }
+            });
+    </script>
+</body>
+</html>

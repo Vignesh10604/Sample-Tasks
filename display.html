@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sequential Letter Reveal</title>
+    <style>
+        .letter {
+            display: inline-block;
+            width: 30px;
+            margin-right: 10px;
+            border-bottom: 2px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="word-display"></div>
+    <div id="buttons-container"></div>
+
+    <script>
+        const word = 'HELLO';
+        const wordDisplay = document.getElementById('word-display');
+        const buttonsContainer = document.getElementById('buttons-container');
+
+        // Create letter placeholders
+        const letterElements = word.split('').map(() => {
+            const letterSpan = document.createElement('span');
+            letterSpan.classList.add('letter');
+            letterSpan.textContent = '';
+            wordDisplay.appendChild(letterSpan);
+            return letterSpan;
+        });
+
+        // Create buttons for each letter
+        word.split('').forEach((letter, index) => {
+            const button = document.createElement('button');
+            button.textContent = `letter ${index + 1}`;
+            
+            button.addEventListener('click', () => {
+                if (!letterElements[index].textContent) {
+                    letterElements[index].textContent = letter;
+                    button.disabled = true;
+                }
+            });
+
+            buttonsContainer.appendChild(button);
+        });
+    </script>
+</body>
+</html>
